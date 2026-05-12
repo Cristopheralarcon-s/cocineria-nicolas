@@ -128,17 +128,17 @@ body {
 
 .login-logo {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
-.login-logo .emoji { font-size: 52px; display: block; margin-bottom: 8px; }
+.login-logo .emoji { font-size: 36px; display: block; margin-bottom: 6px; }
 .login-logo h1 {
   font-family: 'Syne', sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--naranja);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
-.login-logo p { font-size: 11px; color: var(--texto2); letter-spacing: 3px; margin-top: 4px; }
+.login-logo p { font-size: 10px; color: var(--texto2); letter-spacing: 2px; margin-top: 3px; }
 
 .form-group { margin-bottom: 16px; }
 .form-group label { font-size: 12px; color: var(--texto2); display: block; margin-bottom: 6px; }
@@ -220,10 +220,6 @@ body {
   .brand-sub  { font-size: 8px; }
   .tab-btn    { padding: 4px 5px; font-size: 9px; }
   .tab-btn .t-icon { font-size: 13px; }
-  #appMain    { padding: 10px 8px; }
-  .section-title { font-size: 15px; }
-  .fin-grid { grid-template-columns: repeat(2, 1fr); }
-  .comanda-grid { grid-template-columns: 1fr; }
 }
 
 .header-brand { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
@@ -235,20 +231,35 @@ body {
 }
 .brand-sub { font-size: 9px; color: var(--texto2); letter-spacing: 1px; }
 
-.header-tabs { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+.header-tabs { display: flex; gap: 4px; flex-wrap: nowrap; justify-content: flex-end; }
 .tab-btn {
   background: var(--bg2); color: var(--texto2);
   border: none; border-radius: 8px;
-  padding: 5px 9px; cursor: pointer;
+  padding: 5px 8px; cursor: pointer;
   font-size: 10px; font-weight: 600;
   font-family: 'DM Sans', sans-serif;
   display: flex; flex-direction: column;
   align-items: center; gap: 1px;
   transition: all .2s;
+  white-space: nowrap;
 }
 .tab-btn .t-icon { font-size: 15px; }
-.tab-btn.active { background: var(--naranja); color: #fff; }
+.tab-btn.active { background: var(--naranja-alt); color: #fff; }
 .tab-btn.danger { background: #450a0a; color: #f87171; }
+
+@media (max-width: 480px) {
+  .tab-btn { padding: 5px 6px; font-size: 9px; }
+  .tab-btn .t-icon { font-size: 16px; }
+  .tab-btn span:not(.t-icon) { display: none; }
+  #appHeader { padding: 6px 8px; gap: 4px; }
+  .header-brand .emoji { font-size: 18px; }
+  .brand-name { font-size: 12px; letter-spacing: 0; }
+  .brand-sub { display: none; }
+  #appMain { padding: 10px 8px; }
+  .section-title { font-size: 15px; }
+  .fin-grid { grid-template-columns: repeat(2, 1fr); }
+  .comanda-grid { grid-template-columns: 1fr; }
+}
 
 /* ── MAIN CONTENT ──────────────────────────────────────── */
 #appMain { padding: 14px; max-width: 900px; margin: 0 auto; }
