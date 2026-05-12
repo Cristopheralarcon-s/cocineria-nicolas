@@ -20,10 +20,6 @@ import { getFirestore, doc, setDoc, getDoc, collection,
          query, orderBy, where, Timestamp }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// ╔══════════════════════════════════════════════════════════╗
-// ║  🔧 CONFIGURACIÓN FIREBASE — CAMBIA ESTOS VALORES       ║
-// ║  Obtén los datos en: console.firebase.google.com        ║
-// ╚══════════════════════════════════════════════════════════╝
 const firebaseConfig = {
   apiKey:            "AIzaSyCNnvhI5YEYmyKavYvorgFInlZvvPDZWWk",
   authDomain:        "cocineria-nicolas.firebaseapp.com",
@@ -1081,32 +1077,8 @@ body {
   </div>
 </div>
 
-<!-- MODAL INFO -->
-<div class="modal-overlay" id="modalInfo">
-  <div class="modal-box">
-    <div class="modal-header">
-      <span class="modal-title">📡 Compartir & Impresora</span>
-      <button class="modal-close" onclick="document.getElementById('modalInfo').classList.remove('open')">✕</button>
-    </div>
-    <div style="font-size:12px;color:var(--texto2);margin-bottom:12px">
-      Abre este archivo HTML en Chrome desde cualquier dispositivo conectado a la misma red WiFi. Para impresora térmica 80mm conecta por USB y selecciónala al imprimir.
-    </div>
-    <div style="background:var(--bg-alt);border-radius:8px;padding:10px;font-size:11px;color:var(--verde)">
-      💡 <strong>Tip:</strong> Guarda este archivo en Google Drive para tenerlo siempre disponible desde cualquier dispositivo.
-    </div>
-    <button class="btn-cancel-pago" style="width:100%;margin-top:12px" onclick="document.getElementById('modalInfo').classList.remove('open')">Cerrar</button>
-  </div>
-</div>
-
 <script>
-// ════════════════════════════════════════════════════════════
-//  COMANDA PRO — Lógica principal
-//  🎨 Para modificar colores: busca las variables CSS arriba
-//  📝 Para cambiar nombre: busca "COMANDA PRO"
-//  🍽️ Para cambiar menú inicial: busca MENU_INICIAL
-// ════════════════════════════════════════════════════════════
 
-// ── MENÚ INICIAL (modifica aquí tus platillos) ─────────────
 const MENU_INICIAL = [
   { id:"e1", nombre:"Sopa del día",       categoria:"Entradas",       precio:0 },
   { id:"e2", nombre:"Ensalada",           categoria:"Entradas",       precio:0 },
@@ -1442,7 +1414,6 @@ function renderTabs() {
       { id:"menu",     icon:"📋", label:"Menú"     },
       { id:"usuarios", icon:"👥", label:"Usuarios" },
     ] : []),
-    { id:"info",   icon:"ℹ️", label:"Info"   },
     { id:"logout", icon:"🚪", label:"Salir",  danger:true },
   ];
   document.getElementById("headerTabs").innerHTML = tabs.map(t =>
